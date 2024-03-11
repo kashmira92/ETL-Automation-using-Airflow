@@ -38,21 +38,21 @@ def retail():
         gcp_conn_id='gcp',
     )
 
-    # gcs_to_raw = aql.load_file(
-    #     task_id='gcs_to_raw',
-    #     input_file=File(
-    #         'gs://kash_online_retail_bucket/raw/online_retail.csv',
-    #         conn_id='gcp',
-    #         filetype=FileType.CSV,
-    #         # encoding='utf-8',
-    #     ),
-    #     output_table=Table(
-    #         name='raw_invoices1',
-    #         conn_id='gcp',
-    #         metadata=Metadata(schema='retail')
-    #     ),
-    #     use_native_support=False,
-    # )
+    gcs_to_raw = aql.load_file(
+        task_id='gcs_to_raw',
+        input_file=File(
+            'gs://kash_online_retail_bucket/raw/online_retail.csv',
+            conn_id='gcp',
+            filetype=FileType.CSV,
+            # encoding='utf-8',
+        ),
+        output_table=Table(
+            name='raw_invoices1',
+            conn_id='gcp',
+            metadata=Metadata(schema='retail')
+        ),
+        use_native_support=False,
+    )
 
     # @task
     # def gcs_to_raw():
@@ -69,12 +69,12 @@ def retail():
 
     # upload_csv_to_gcs >> create_retail_dataset >> gcs_to_raw
 
-# @task.external_python(python='/usr/local/airflow/soda_venv/bin/python')
-#     def check_load(scan_name='check_load', checks_subpath='sources'):
-#         from include.soda.check_function import check
+@task.external_python(python='/usr/local/airflow/soda_venv/bin/python')
+    def check_load(scan_name='check_load', checks_subpath='sources'):
+        from include.soda.check_function import check
 
-#         return check(scan_name, checks_subpath)
-    # check_load()
+        return check(scan_name, checks_subpath)
+    check_load()
 
     transform = DbtTaskGroup(
         group_id='transform',
