@@ -1,0 +1,11 @@
+# .gitattributes
+*.yaml text eol=lf
+*.py text eol=lf
+dags/*.py text eol=lf
+*.dockerignore text eol=lf
+*.gitignore text eol=lf
+Dockerfile text eol=lf
+README.md text eol=lf
+include/dbt/.user.yml text eol=lf
+include/dbt/dbt_packages/dbt_utils/.circleci/config.yml text eol=lf
+include/dbt/dbt_packages/dbt_utils/.github/CODEOWNERS text eol=lf
