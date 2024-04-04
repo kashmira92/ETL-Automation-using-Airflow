@@ -1,5 +1,5 @@
 # ETL Automation in the Retail Domain using Apache Airflow
-Apache Airflow Project using BigQuery and Docker.
+Apache Airflow Project using BigQuery, DBT and Docker.
 
 • Orchestrated Airflow DAG to ingest raw retail data of over 10M+ rows into a star schema model in BigQuery within Docker, enforcing data quality with integrated Astro CLI.
 
