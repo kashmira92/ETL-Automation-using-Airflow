@@ -11,6 +11,7 @@ Furthermore, the DAG was Dockerized and scheduled to seamlessly manage end-to-en
 
 ## Dataset:
 Column:
+
 InvoiceNo -- Invoice number. Nominal, a 6-digit integral number uniquely assigned to each transaction. If this code starts with letter 'c', it indicates a cancellation.
 
 StockCode -- Product (item) code. Nominal, a 5-digit integral number uniquely assigned to each distinct product.
