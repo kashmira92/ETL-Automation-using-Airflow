@@ -10,21 +10,12 @@ To optimize querying and analysis, reporting models were built using DBT on Airf
 Furthermore, the DAG was Dockerized and scheduled to seamlessly manage end-to-end data tasks. By incorporating Continuous Integration/Continuous Deployment (CI/CD) processes, the data pipeline remained robust and reliable, capable of efficiently handling large-scale data operations.
 
 ## Dataset:
-Column
-Description
-InvoiceNo
-Invoice number. Nominal, a 6-digit integral number uniquely assigned to each transaction. If this code starts with letter 'c', it indicates a cancellation.
-StockCode
-Product (item) code. Nominal, a 5-digit integral number uniquely assigned to each distinct product.
-Description
-Product (item) name. Nominal.
-Quantity
-The quantities of each product (item) per transaction. Numeric.
-InvoiceDate
-Invice Date and time. Numeric, the day and time when each transaction was generated.
-UnitPrice
-Unit price. Numeric, Product price per unit in sterling.
-CustomerID
-Customer number. Nominal, a 5-digit integral number uniquely assigned to each customer.
-Country
-Country name. Nominal, the name of the country where each customer resides.
+Column:
+InvoiceNo -- Invoice number. Nominal, a 6-digit integral number uniquely assigned to each transaction. If this code starts with letter 'c', it indicates a cancellation.
+StockCode -- Product (item) code. Nominal, a 5-digit integral number uniquely assigned to each distinct product.
+Description -- Product (item) name. Nominal.
+Quantity -- The quantities of each product (item) per transaction. Numeric.
+InvoiceDate -- Invice Date and time. Numeric, the day and time when each transaction was generated.
+UnitPrice -- Unit price. Numeric, Product price per unit in sterling.
+CustomerID -- Customer number. Nominal, a 5-digit integral number uniquely assigned to each customer.
+Country -- Country name. Nominal, the name of the country where each customer resides.
